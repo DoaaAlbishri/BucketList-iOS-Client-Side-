@@ -9,7 +9,7 @@ import Foundation
 
 class TaskModel {
     static func getAllTasks(completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
-        let url = URL(string: "http://localhost:8080/tasks")
+        let url = URL(string: "https://saudibucketlistapi.herokuapp.com/tasks/")
         let session = URLSession.shared
         let task = session.dataTask(with: url!, completionHandler: completionHandler)
         task.resume()
